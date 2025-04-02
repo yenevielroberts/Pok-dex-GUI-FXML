@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="containerGeneral" alignment="CENTER" prefHeight="240.0" prefWidth="375.0" spacing="20.0" style="-fx-background-color: #F52C34;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.m3a54pokemonguifxml.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <!--Nom + ID-->
+    <HBox alignment="TOP_CENTER" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #F78C7A;">
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </padding>
+        <children>
+            <Label fx:id="valueNombre" style="-fx-font-weight: bold;" text="Pokemon Name" />
+            <Label fx:id="valueId" style="-fx-font-weight: bold;" text="N.º 0000" />
+        </children>
+    </HBox>
+    <!--caja que contiene info general y resto info (no contiene los botones )-->
+   <VBox prefHeight="200.0" prefWidth="100.0">
+      <children>
+         <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <VBox prefHeight="200.0" prefWidth="100.0">
+                  <children>
+                       <!--imagen-->
+                       <ImageView fx:id="imagenView" fitHeight="200.0" fitWidth="200.0" />
+                  </children>
+               </VBox>
+
+                 <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F78C7A;">
+                  <Label fx:id="valueNombreG" style="-fx-font-weight: bold;" text="Pokemon Name">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="2.0">
+                     <children>
+         
+                           <!--Info general-->
+                           <Label fx:id="textTipos" style="-fx-font-weight: bold;" text="Tipos:" />
+                           <HBox spacing="10.0">
+                           <StackPane fx:id="paneTipo1" prefHeight="15.0" prefWidth="70.0" style="-fx-border-radius: 10; -fx-border-width: 5;">
+                              <children>
+                                     <Label fx:id="valueTipo1" alignment="CENTER" contentDisplay="CENTER" text="type1" textAlignment="CENTER" />
+                              </children>
+                           </StackPane>
+                           <StackPane fx:id="paneTipo2" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="70.0">
+                              <children>
+                                     <Label fx:id="valueTipo2" alignment="CENTER" contentDisplay="CENTER" text="type2" textAlignment="CENTER" />
+                              </children>
+                           </StackPane>
+                           </HBox>
+         
+                           <Label fx:id="textTotal" style="-fx-font-weight: bold;" text="Total:" />
+                           <Label fx:id="valueTotal" text="..." />
+         
+                           <Label fx:id="textHp" style="-fx-font-weight: bold;" text="HP:" />
+                           <Label fx:id="valueHp" text="..." />
+                     </children></VBox>
+                  <padding>
+                     <Insets left="10.0" top="10.0" />
+                  </padding>
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+   
+                 </VBox>
+            </children>
+         </HBox>
+
+                  <!--Resto de info-->
+            <VBox style="-fx-background-color: #F78C7A;">
+                <Label fx:id="textAtack" style="-fx-font-weight: bold;" text="Atack:" />
+                <Label fx:id="valueAtack" text="..." />
+
+                      <Label fx:id="textDefense" style="-fx-font-weight: bold;" text="Defense:">
+                </Label>
+                <Label fx:id="valueDefense" text="..." />
+
+                      <Label fx:id="textSpcAtack" style="-fx-font-weight: bold;" text="Special Atack:" />
+                <Label fx:id="valueSpcAttack" text="..." />
+
+                      <Label fx:id="textSpcDefense" style="-fx-font-weight: bold;" text="Special Defense:" />
+                <Label fx:id="valueSpcDefense" text="..." />
+
+                      <Label fx:id="textSpeed" style="-fx-font-weight: bold;" text="Speed:" />
+                <Label fx:id="valueSpeed" text="..." />
+            <rotationAxis>
+               <Point3D />
+            </rotationAxis>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+            </VBox>
+      </children>
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+   </VBox>
+     <!--Botons fletxes-->
+     <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+         <children>
+             <Button fx:id="btnLeft" mnemonicParsing="false" onAction="#onLeftButtonClick" style="-fx-background-color: #FFEB3B;" text="&lt;" />
+             <Button fx:id="btnRight" mnemonicParsing="false" onAction="#onRightButtonClick" style="-fx-background-color: #FFEB3B;" text="&gt;" />
+         </children>
+     </HBox>
+
+</VBox>
